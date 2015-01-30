@@ -3,7 +3,7 @@
 <head>
   <title>tail.js</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="http://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
 
   <style>
@@ -18,14 +18,22 @@
       { border: 1px solid #ccc;
         height: 600px;
         padding: 0.5em;
-        overflow: hidden;
+        overflow: auto;
         position: relative;
         overflow-y: scroll; }
+    .titleLine *{
+       display: inline-block;
+       margin-right: 20px;
+    }
   </style>
 
 </head>
 <body>
-  <pre id="info"></pre>
+  <div class="titleLine">
+      <pre id="info"></pre>
+      <button id="clean" onclick="return $('#tail').empty();">clean</button>
+  </div>
+
   <pre id="tail"></pre>
 
   <script>
