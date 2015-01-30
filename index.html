@@ -10,13 +10,13 @@
     body
       { color: #1a2c37;
         font-family: 'Helvetica', sans-serif; font-size: 86%;
-        padding: 2em; }
+      }
     #info
       { font-size: 120%;
         font-weight: bold; }
     #tail
       { border: 1px solid #ccc;
-        height: 300px;
+        height: 600px;
         padding: 0.5em;
         overflow: hidden;
         position: relative;
@@ -32,8 +32,8 @@
 
   var Application = function() {
     
-    var socket  = new io.Socket(null, {port: 8000});
-    socket.connect();
+    var socket  = io();
+    //socket.connect();
 
     var lines = 0;
 

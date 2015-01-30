@@ -13,8 +13,6 @@
 // Connect with browser and watch changes in the logfile
 //
 //
-require.paths.unshift('./lib/socket-io/lib/',
-                      './lib/socket.io-node/lib/');
 
 var http    = require('http'),
     io      = require('socket.io'),
@@ -22,7 +20,7 @@ var http    = require('http'),
 
 var spawn = require('child_process').spawn;
 
-var filename = process.ARGV[2];
+var filename = process.argv[2];
 if (!filename) return util.puts("Usage: node <server.js> <filename>");
 
 // -- Node.js Server ----------------------------------------------------------
@@ -34,7 +32,7 @@ server = http.createServer(function(req, res){
   	res.end();
   });
 })
-server.listen(8000, '0.0.0.0');
+server.listen(8082, '0.0.0.0');
 
 // -- Setup Socket.IO ---------------------------------------------------------
 
@@ -52,4 +50,4 @@ io.on('connection', function(client){
 
 });
 
-console.log('Server running at http://0.0.0.0:8000/, connect with a browser to see tail output');
+console.log('Server running at http://0.0.0.0:8082/, connect with a browser to see tail output');
