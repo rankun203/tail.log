@@ -32,7 +32,7 @@ server = http.createServer(function(req, res){
   	res.end();
   });
 })
-server.listen(8082, '127.0.0.1');
+server.listen(8082, '0.0.0.0');
 
 // -- Setup Socket.IO ---------------------------------------------------------
 
@@ -50,4 +50,4 @@ io.on('connection', function(client){
 
 });
 
-console.log('Server running at http://127.0.0.1:8082/, connect with a browser to see tail output');
+console.log('Server running at http://0.0.0.0:8082/, connect with a browser to see tail output');
