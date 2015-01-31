@@ -1,0 +1,6 @@
+{
+  "name": "tail.log",
+  "dependencies": {
+    "socket.io": "1.3.2"
+  }
+}
