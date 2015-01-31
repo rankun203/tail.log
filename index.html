@@ -56,7 +56,8 @@
       if (message.tail) {
         $('#tail').html( $('#tail').html() + message.tail );
         lines++
-        $('#tail').scrollTop(lines*100)
+        // $('#tail').scrollTop(lines*100) // When Stack Trace happens, scroll will work noneffective.
+        $('#tail').scrollTop(2000000000);
       }
     });
     
