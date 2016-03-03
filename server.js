@@ -16,7 +16,13 @@
 
 var http     = require('http'),
     socketIo = require('socket.io'),
-    fs       = require('fs');
+    fs       = require('fs'),
+    auth     = require('http-auth'),
+    basic    = auth.basic({
+      realm: "Youdar EasyAccounting System.",
+      file : __dirname + "/../data/users.htpasswd" // gevorg:gpass, Sarah:testpass ...
+    });
+
 
 var spawn = require('child_process').spawn,
     port  = process.env.PORT || 8082;

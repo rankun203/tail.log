@@ -1,13 +1,14 @@
 {
   "name": "tail.log",
   "dependencies": {
+    "http-auth": "^2.2.8",
     "socket.io": "1.3.2"
   },
   "scripts": {
     "start": "node server.js"
   },
   "description": "A light weight web log tail tool by Youdar",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "server.js",
   "devDependencies": {},
   "repository": {
