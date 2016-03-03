@@ -1,14 +1,15 @@
 # tail.log
 A light weight web log tail tool, watch everything in your browser!
 
-### Modified from: https://gist.github.com/karmi/718035
-
-* Fixed some errors, while node has changed a lot.
+[![NPM](https://nodei.co/npm/tail.log.png)](https://nodei.co/npm/tail.log/)
 
 ### Setup
 
-1. `npm install`
-2. `node ./server.js /path/to/your.log`
+1. `npm install tail.log`
+2. `cd tail.log && npm install && cd node_modules`
+3. `node ./server.js /path/to/your.log`
+
+Note: This is not a library, it's a server program actually, we will try to make it a command line tool.
 
 **~~It's suggested to have a base authentication on your web server to prevent malicious log snooping.~~**
 
@@ -18,8 +19,12 @@ A light weight web log tail tool, watch everything in your browser!
 
 ### Updates
 
-#### Update 2016-03-03:
+#### Update 1.0.7:
 
 The Basic Authentication: youdar:youdarpass
 
 Generate: `htpasswd -b users.htpasswd youdar youdarpass`
+
+#### Modified from: https://gist.github.com/karmi/718035
+
+* Fixed some errors, while node has changed a lot.
