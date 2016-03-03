@@ -14,7 +14,7 @@ A light weight web log tail tool, watch everything in your browser!
 
 ### Screenshoots
 
-<img src='http://netd.mindfine.com/pictures/dev/tail.log.png' width='759'/>
+<img src='http://netd.mindfine.com/pictures/dev/tail.log.youdar.png' width='625'/>
 
 ### Updates
 
