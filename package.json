@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "description": "A light weight web log tail tool",
+  "description": "A light weight web log tail tool by Youdar",
   "version": "1.0.0",
   "main": "server.js",
   "devDependencies": {},
