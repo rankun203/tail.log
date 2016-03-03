@@ -1,5 +1,5 @@
 # tail.log
-A light weight web log tail tool
+A light weight web log tail tool, watch everything in your browser!
 
 ### Modified from: https://gist.github.com/karmi/718035
 
@@ -12,7 +12,13 @@ A light weight web log tail tool
 
 **~~It's suggested to have a base authentication on your web server to prevent malicious log snooping.~~**
 
-Update 2016-03-03:
+### Screenshoots
+
+<img src='http://netd.mindfine.com/pictures/dev/tail.log.png' width='759'/>
+
+### Updates
+
+#### Update 2016-03-03:
 
 The Basic Authentication: youdar:youdarpass
 
