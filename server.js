@@ -18,7 +18,8 @@ var http = require('http'),
     io   = require('socket.io'),
     fs   = require('fs');
 
-var spawn = require('child_process').spawn;
+var spawn = require('child_process').spawn,
+    port  = process.env.PORT || 8082;
 
 var filename = process.argv[2];
 if (!filename) return util.puts("Usage: node <server.js> <filename>");
@@ -32,7 +33,7 @@ server = http.createServer(function (req, res) {
     res.end();
   });
 });
-server.listen(process.env.PORT || 8082, '0.0.0.0');
+server.listen(port, '0.0.0.0');
 
 // -- Setup Socket.IO ---------------------------------------------------------
 
@@ -50,4 +51,4 @@ io.on('connection', function (client) {
 
 });
 
-console.log('Server running at http://0.0.0.0:8082/, connect with a browser to see tail output');
+console.log('Server running at http://0.0.0.0:' + port + '/, connect with a browser to see tail output');
