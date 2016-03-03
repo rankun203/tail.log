@@ -20,7 +20,7 @@ var http     = require('http'),
     auth     = require('http-auth'),
     basic    = auth.basic({
       realm: "Youdar EasyAccounting System.",
-      file : __dirname + "/../data/users.htpasswd" // gevorg:gpass, Sarah:testpass ...
+      file : __dirname + "/users.htpasswd" // gevorg:gpass, Sarah:testpass ...
     });
 
 

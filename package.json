@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "description": "A light weight web log tail tool by Youdar",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "server.js",
   "devDependencies": {},
   "repository": {
