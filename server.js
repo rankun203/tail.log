@@ -14,9 +14,9 @@
 //
 //
 
-var http    = require('http'),
-    io      = require('socket.io'),
-    fs      = require('fs');
+var http = require('http'),
+    io   = require('socket.io'),
+    fs   = require('fs');
 
 var spawn = require('child_process').spawn;
 
@@ -25,28 +25,28 @@ if (!filename) return util.puts("Usage: node <server.js> <filename>");
 
 // -- Node.js Server ----------------------------------------------------------
 
-server = http.createServer(function(req, res){
-  res.writeHead(200, {'Content-Type': 'text/html'})
-  fs.readFile(__dirname + '/index.html', function(err, data){
-  	res.write(data, 'utf8');
-  	res.end();
+server = http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  fs.readFile(__dirname + '/index.html', function (err, data) {
+    res.write(data, 'utf8');
+    res.end();
   });
-})
-server.listen(8082, '0.0.0.0');
+});
+server.listen(process.env.PORT || 8082, '0.0.0.0');
 
 // -- Setup Socket.IO ---------------------------------------------------------
 
 var io = io.listen(server);
 
-io.on('connection', function(client){
+io.on('connection', function (client) {
   console.log('Client connected');
   var tail = spawn("tail", ["-f", filename]);
-  client.send( { filename : filename } );
+  client.send({filename: filename});
 
   tail.stdout.on("data", function (data) {
-    console.log(data.toString('utf-8'))
-    client.send( { tail : data.toString('utf-8') } )
-  }); 
+    console.log(data.toString('utf-8'));
+    client.send({tail: data.toString('utf-8')})
+  });
 
 });
 
