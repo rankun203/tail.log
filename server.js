@@ -32,7 +32,7 @@ if (!filename) return util.puts("Usage: node <server.js> <filename>");
 
 // -- Node.js Server ----------------------------------------------------------
 
-var server = http.createServer(function (req, res) {
+var server = http.createServer(basic, function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   fs.readFile(__dirname + '/index.html', function (err, data) {
     res.write(data, 'utf8');
