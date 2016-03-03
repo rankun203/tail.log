@@ -14,9 +14,9 @@
 //
 //
 
-var http = require('http'),
-    io   = require('socket.io'),
-    fs   = require('fs');
+var http     = require('http'),
+    socketIo = require('socket.io'),
+    fs       = require('fs');
 
 var spawn = require('child_process').spawn,
     port  = process.env.PORT || 8082;
@@ -26,7 +26,7 @@ if (!filename) return util.puts("Usage: node <server.js> <filename>");
 
 // -- Node.js Server ----------------------------------------------------------
 
-server = http.createServer(function (req, res) {
+var server = http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   fs.readFile(__dirname + '/index.html', function (err, data) {
     res.write(data, 'utf8');
@@ -37,7 +37,7 @@ server.listen(port, '0.0.0.0');
 
 // -- Setup Socket.IO ---------------------------------------------------------
 
-var io = io.listen(server);
+var io = socketIo.listen(server);
 
 io.on('connection', function (client) {
   console.log('Client connected');
