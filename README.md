@@ -1,5 +1,5 @@
 # tail.log
-An light weight web log tail tool
+A light weight web log tail tool
 
 ### Modified from: https://gist.github.com/karmi/718035
 
