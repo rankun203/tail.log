@@ -15,3 +15,5 @@ A light weight web log tail tool
 Update 2016-03-03:
 
 The Basic Authentication: youdar:youdarpass
+
+Generate: `htpasswd -b users.htpasswd youdar youdarpass`
