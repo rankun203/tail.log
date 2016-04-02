@@ -11,7 +11,7 @@ A light weight web log tail tool, watch everything in your browser!
 
 Note: This is not a library, it's a server program actually, we will try to make it a command line tool.
 
-**~~It's suggested to have a base authentication on your web server to prevent malicious log snooping.~~**
+**Since 1.0.7, a built-in basic auth are integrated, see updates.~~It's suggested to have a base authentication on your web server to prevent malicious log snooping.~~**
 
 ### Screenshoots
 
